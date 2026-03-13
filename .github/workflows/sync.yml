@@ -25,6 +25,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/nppThemes"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync userDefinedLanguages
         uses: wei/git-sync@v3
         with:
@@ -33,6 +34,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/userDefinedLanguages"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync npp-usermanual
         uses: wei/git-sync@v3
         with:
@@ -41,6 +43,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/npp-usermanual"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync nppPluginList
         uses: wei/git-sync@v3
         with:
@@ -49,6 +52,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/nppPluginList"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync notepad-plus-plus
         uses: wei/git-sync@v3
         with:
@@ -57,6 +61,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/notepad-plus-plus"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync plugintemplate
         uses: wei/git-sync@v3
         with:
@@ -65,6 +70,7 @@ jobs:
           destination_repo: "git@github.com:pryrt/plugintemplate"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        continue-on-error: true
       - name: git-sync plugindemo
         uses: wei/git-sync@v3
         with:
@@ -73,4 +79,4 @@ jobs:
           destination_repo: "git@github.com:pryrt/plugindemo"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-
+        continue-on-error: true
