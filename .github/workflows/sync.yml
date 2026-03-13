@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # TODO: set up a cron, as well
+
+jobs:
+  # This workflow contains a single job called "build"
+  sync:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: git-sync nppThemes
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "notepad-plus-plus/nppThemes"
+          source_branch: "main"
+          destination_repo: "pryrt/nppThemes"
+          destination_branch: "main"
+          #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # optional
+          #source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
+          #destination_ssh_private_key: ${{ secrets.DESTINATION_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
+    # TODO: do the other repos
