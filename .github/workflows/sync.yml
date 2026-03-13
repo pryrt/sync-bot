@@ -25,12 +25,12 @@ jobs:
           destination_repo: "git@github.com:pryrt/nppThemes"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: git-sync userDefinedLangs
+      - name: git-sync userDefinedLanguages
         uses: wei/git-sync@v3
         with:
-          source_repo: "notepad-plus-plus/userDefinedLangs"
+          source_repo: "notepad-plus-plus/userDefinedLanguages"
           source_branch: "main"
-          destination_repo: "git@github.com:pryrt/userDefinedLangs"
+          destination_repo: "git@github.com:pryrt/userDefinedLanguages"
           destination_branch: "main"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: git-sync npp-usermanual
